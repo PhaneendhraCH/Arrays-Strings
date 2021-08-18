@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char s1[] = "string1";
+    char s2[] = "string2";
+    strcat(s1,s2);
+    printf("New string is '%s' and length %ld",s1,strlen(s1));
+    
+}
