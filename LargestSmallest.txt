@@ -1,0 +1,28 @@
+// Following is implemented using bubble sort algorithm
+
+/*
+
+Time Complexity : 
+
+Lower Bound : N
+
+*/
+#include<stdio.h>
+int main(){
+   int a[5] = {0,1,4,3,2};
+   int i,j,n,t;
+
+   for (i=0; i<4; i++){
+      for (j=i+1; j<5; j++){
+         if (a[i] > a[j]){
+            t = a[i];
+            a[i] = a[j];
+            a[j] = t;
+         }
+      }
+   }
+
+    printf("largest element : %d\nsmallest element : %d",a[4],a[0]);
+   return 0;
+}
+
