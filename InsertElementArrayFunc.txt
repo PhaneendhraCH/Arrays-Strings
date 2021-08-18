@@ -1,0 +1,50 @@
+
+#include <stdio.h>
+#define MAX 100
+
+
+int insertelement(int a[],int n){
+    int pos,val,z;
+    printf("Enter at which position you want to insert : ");
+    scanf("%d",&pos);
+    
+    if (pos<n && pos>0){
+       printf("Enter the value to be inserted at specific position : ");
+    scanf("%d",&val);
+        
+        for (z=0;z<pos-1;z++);
+
+        for (int k=n;k>z;k--){
+            a[k] = a[k-1];
+            
+        a[z] =val;
+    }
+    }
+    else if (pos == n) {
+    printf("Enter the value to be inserted at specific position : ");
+    scanf("%d",&val);
+     a[pos] = val;   
+    }
+    
+    n+=1;
+    return n;
+}
+
+int main()
+{
+    int a[MAX],n,len;
+    
+    printf("Enter total no.of elements to be inserted\n");
+    scanf("%d",&n);
+    
+    printf("Enter array elements\n");
+    for (int i =0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    
+    len=insertelement(a,n);
+    for (int i =0;i<len;i++){
+        printf("%d ",a[i]);
+    }
+    return 0;
+}
