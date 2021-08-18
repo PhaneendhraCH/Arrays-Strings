@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char array[100] = "madam";
+    printf("Length of string is : %d\n",strlen(array));
+    
+    for (int i=0, j=strlen(array)-1;i<strlen(array),j>=0;i++,j--){
+        if (array[i] == array[j])
+               //printf("%c\t%c\n",array[i],array[j]);
+               continue;
+        else{
+            printf("Not a palindrome");
+            break;
+        }
+    }
+    
+}
