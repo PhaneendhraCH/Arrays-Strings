@@ -2,23 +2,19 @@
 #define MAX 100
 
 int delete (int a[],int n,int pos){
-   
-   while(pos<MAX){
+    
        if (pos>0 && pos<=n)
        {
            for (int j=pos-1;j<n-1;j++){
                a[j] = a[j+1];
            }
-           break;
+          return n-1;
        }
        else{
             printf("Forbidden \n");
-            break;
+            return n;
             }
    }
-    n-=1;
-    return n;
-}
 
 int main() {
     int n,pos;
